@@ -352,6 +352,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 <script">
+
+	// Ensure this script is running after the DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.querySelector('.navbar-toggler');
+  const navbarMenu = document.querySelector('#navbarNav');
+
+  toggleButton.addEventListener('click', function() {
+    navbarMenu.classList.toggle('collapse'); // Toggle collapse class
+  });
+});
+
   document.addEventListener("DOMContentLoaded", function () {
     new Typed("#typed-text", {
       strings: ["Blog posts", "Articles", "Novels", "Stories", "Profile bios"],
